@@ -6,6 +6,7 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 import AppRoutes from './AppRoutes';
 import ProvinciaPage from './pages/ProvinciaPage';
+import { DarkModeProvider } from './styles/DarkModeContext';
 
 
 function App() {
@@ -34,13 +35,13 @@ function App() {
   }
   
 return (
-    <>
+    <DarkModeProvider>
       <BrowserRouter>
         <Navbar events={events} searchText={searchText} setSearchText={setSearchText} />
         <AppRoutes events={events} searchText={searchText} setSearchText={setSearchText} />
       </BrowserRouter>
       <Footer />
-    </>
+    </DarkModeProvider>
   );
 }
 

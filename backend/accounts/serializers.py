@@ -22,7 +22,7 @@ class UserSerializer(serializers.ModelSerializer):
 class OrganizationProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = OrganizationProfile
-        fields = ['organization_name', 'logo', 'partita_iva', 'address']
+        fields = ['organization_name', 'logo', 'cv', 'address']
 
 # Separate serializer for OrganizationProfile
 class OrganizationSerializer(serializers.ModelSerializer):

@@ -49,7 +49,14 @@ export default function AppRoutes({ events, searchText, setSearchText }) {
       <Route path="/register-choice" element={<RegisterChoicePage />} />
       <Route path="/register-user" element={<RegisterUserPage />} />
       <Route path="/register-organization" element={<RegisterOrganizationPage />} />
-      <Route path="/province/:provincia" element={<ProvinciaPage events={events} />} />
+      <Route path="/province/:provincia" element={
+        <ProvinciaPage 
+          events={events} 
+          searchText={searchText} 
+          setSearchText={setSearchText}
+        />
+      } />
+
 
 
 
